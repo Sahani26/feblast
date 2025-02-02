@@ -1,14 +1,15 @@
+ 
 {
   "version": 2,
-  "buildCommand": "npm install",
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
+  ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server.js"
-    },
-    {
-      "src": "(.*)",
-      "dest": "/frontend/build/index.html"
+    { "src": "/(.*)",
+      "dest": "/" 
     }
   ]
 }
